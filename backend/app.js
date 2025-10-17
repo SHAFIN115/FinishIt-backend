@@ -10,7 +10,12 @@ require('dotenv').config();
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
-
+app.get('/', (req, res) => {
+  res.send('FinishIt Backend is running successfully on EC2!');
+});
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok', uptime: process.uptime() });
+});
 app.use('/api/users', userRoutes);
 app.use('/api/tasks', taskRoutes);
 
