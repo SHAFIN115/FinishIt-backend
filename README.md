@@ -94,6 +94,8 @@ JWT_SECRET=mysecret
 
 ### 4. Run MySQL with Docker
 
+Run the desktop docker(docker agent) if you have...
+
 ```bash
 docker-compose up -d
 ```
