@@ -11,4 +11,6 @@ router.post('/login', userController.login);
 // Get all users (optional)
 router.get('/', userController.getAllUsers);
 
+router.post('/auth/google', userController.googleAuth);
+
 module.exports = router;
